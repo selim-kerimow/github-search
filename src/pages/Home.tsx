@@ -35,7 +35,7 @@ const Home: React.FC = () => {
     }
 
     return (
-        <div className="text-center pt-10">
+        <div className="text-center pt-10 h-[100%] min-h-[calc(100vh-59px)]">
             { isError && <h3 className="text-lg text-red-500 my-4">Something went wrong! Make sure you are connected to internet!</h3>}
 
         <div className="w-[30%] mx-auto relative max-sm:w-[90%] max-md:w-[70%] max-lg:w-[50%]">

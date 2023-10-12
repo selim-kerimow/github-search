@@ -6,6 +6,7 @@ import Favorites from "./pages/Favorites";
 
 // components
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 const App: React.FC = () => {
@@ -21,6 +22,8 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Favorites />} />
       </Routes>
+
+      <Footer />
 
     </div>
   );
