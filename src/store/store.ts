@@ -1,4 +1,4 @@
-import { configureStore, getType } from "@reduxjs/toolkit";
+import { configureStore} from "@reduxjs/toolkit";
 import { githubApi } from "./api/github.api";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { githubReducer } from "./slices/github.sllice";
