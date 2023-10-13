@@ -22,7 +22,7 @@ const Home: React.FC = () => {
         skip: debounced.length < 3,
         // refetchOnFocus: true
     })
-    const [fetchRepos, {data: repos}] = useLazyGetReposQuery()
+    const [fetchRepos, {data: repos, isLoading: ReposIsLoading}] = useLazyGetReposQuery()
 
     useEffect(() => {
         setDropdown(users?.length! > 0 && debounced.length > 3)
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
             </ul>}
 
             <div>
-                { isLoading && <h1>Loading...</h1>}
+                { ReposIsLoading && <h1>Loading...</h1>}
                 { repos?.map(repo => <RepoCard repo={repo} key={repo.id}/>)}
             </div>  
         </div>
